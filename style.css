@@ -1,0 +1,234 @@
+/* style.css - (Penyesuaian lebih lanjut untuk konsistensi warna per kategori) */
+
+/* --- Root / General App Styling --- */
+.root {
+    -fx-background-color: #f0f2f5;
+    -fx-font-family: "Segoe UI", "Arial", sans-serif;
+    -fx-font-size: 14px;
+}
+
+/* --- Judul di Menu Utama --- */
+.label-main-menu-title {
+    -fx-font-size: 38px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #2c3e50;
+    -fx-padding: 30px 0 40px 0;
+    -fx-alignment: center;
+    -fx-pref-width: 100%;
+}
+
+/* --- Labels for Form Fields --- */
+.label {
+    -fx-font-size: 13px;
+    -fx-text-fill: #34495e;
+    -fx-font-weight: bold;
+}
+
+/* --- Tombol Umum (Untuk form/daftar) --- */
+/* DEFAULT BLUE BUTTONS (for internal forms/lists unless overridden) */
+.button {
+    -fx-background-color: #3498db; /* Bright blue default */
+    -fx-text-fill: white;
+    -fx-font-size: 15px;
+    -fx-padding: 10px 25px;
+    -fx-background-radius: 6px;
+    -fx-cursor: hand;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.15), 8, 0.0, 0, 3);
+    -fx-border-color: #2980b9;
+    -fx-border-width: 1px;
+}
+
+.button:hover {
+    -fx-background-color: #2980b9;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.2), 10, 0.0, 0, 4);
+}
+
+.button:pressed {
+    -fx-background-color: #1a5276;
+    -fx-translate-y: 1px;
+}
+
+
+/* --- Tombol Utama (3 Pilihan di Menu Utama) --- */
+.button-main-menu {
+    -fx-text-fill: white;
+    -fx-font-size: 20px;
+    -fx-padding: 20px 40px;
+    -fx-background-radius: 10px;
+    -fx-cursor: hand;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.2), 10, 0.0, 0, 5);
+    -fx-border-width: 1px;
+}
+
+.button-main-menu:hover {
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.3), 12, 0.0, 0, 6);
+}
+
+.button-main-menu:pressed {
+    -fx-translate-y: 2px;
+}
+
+.button-peternak {
+    -fx-background-color: #2ecc71; /* Hijau cerah */
+    -fx-border-color: #27ae60;
+}
+.button-peternak:hover {
+    -fx-background-color: #27ae60;
+}
+.button-peternak:pressed {
+    -fx-background-color: #208e50;
+}
+
+.button-kolam {
+    -fx-background-color: #f1c40f; /* Kuning */
+    -fx-border-color: #e6b70a;
+}
+.button-kolam:hover {
+    -fx-background-color: #e6b70a;
+}
+.button-kolam:pressed {
+    -fx-background-color: #cd9a08;
+}
+
+.button-ikan {
+    -fx-background-color: #e74c3c; /* Merah */
+    -fx-border-color: #c0392b;
+}
+.button-ikan:hover {
+    -fx-background-color: #c0392b;
+}
+.button-ikan:pressed {
+    -fx-background-color: #a02d22;
+}
+
+
+/* --- Text Fields & Combo Boxes --- */
+.text-field, .combo-box {
+    -fx-background-color: white;
+    -fx-border-color: #bdc3c7;
+    -fx-border-width: 1px;
+    -fx-border-radius: 5px;
+    -fx-padding: 8px 10px;
+    -fx-prompt-text-fill: #95a5a6;
+    -fx-font-size: 13px;
+}
+
+.text-field:focused, .combo-box:focused {
+    -fx-border-color: #3498db; /* Default blue focus */
+    -fx-background-color: #ecf0f1;
+}
+
+/* Focus colors specific to categories */
+.text-field-peternak:focused, .combo-box-peternak:focused {
+    -fx-border-color: #2ecc71; /* Hijau saat fokus Peternak */
+}
+.text-field-kolam:focused, .combo-box-kolam:focused {
+    -fx-border-color: #f1c40f; /* Kuning saat fokus Kolam */
+}
+.text-field-ikan:focused, .combo-box-ikan:focused {
+    -fx-border-color: #e74c3c; /* Merah saat fokus Ikan */
+}
+
+
+.combo-box .arrow-button {
+    -fx-background-color: #ecf0f1;
+    -fx-background-radius: 0 5px 5px 0;
+}
+.combo-box .arrow-button:hover {
+    -fx-background-color: #bdc3c7;
+}
+
+/* --- Text Area --- */
+.text-area {
+    -fx-background-color: white;
+    -fx-border-color: #bdc3c7;
+    -fx-border-width: 1px;
+    -fx-border-radius: 5px;
+    -fx-padding: 5px;
+    -fx-font-size: 13px;
+    -fx-text-fill: #2c3e50;
+}
+
+.text-area .content {
+    -fx-background-color: white;
+}
+
+/* --- ScrollPane --- */
+.scroll-pane {
+    -fx-background-color: transparent;
+    -fx-padding: 0;
+}
+
+.scroll-pane .viewport {
+    -fx-background-color: transparent;
+}
+
+.scroll-pane .scroll-bar:vertical .track,
+.scroll-pane .scroll-bar:horizontal .track {
+    -fx-background-color: #ecf0f1;
+    -fx-background-radius: 2em;
+}
+
+.scroll-pane .scroll-bar:vertical .thumb,
+.scroll-pane .scroll-bar:horizontal .thumb {
+    -fx-background-color: #bdc3c7;
+    -fx-background-radius: 2em;
+}
+
+.scroll-pane .scroll-bar:vertical .thumb:hover,
+.scroll-pane .scroll-bar:horizontal .thumb:hover {
+    -fx-background-color: #95a5a6;
+}
+
+/* --- Separator --- */
+.separator .line {
+    -fx-border-color: #e0e6eb;
+    -fx-border-width: 1px;
+}
+.separator-main-menu .line {
+    -fx-border-color: #bdc3c7;
+    -fx-border-width: 2px;
+}
+
+/* --- GridPane for Form Layout --- */
+.grid-pane {
+    -fx-padding: 20px;
+    -fx-background-color: #ffffff;
+    -fx-border-color: #e0e6eb;
+    -fx-border-width: 1px;
+    -fx-border-radius: 8px;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.05), 5, 0.0, 0, 2);
+}
+
+/* Category-specific border for grid-pane */
+.grid-pane-peternak {
+    -fx-border-color: #d4f7e2; /* Hijau sangat muda */
+}
+.grid-pane-kolam {
+    -fx-border-color: #fff9d9; /* Kuning sangat muda */
+}
+.grid-pane-ikan {
+    -fx-border-color: #fce4e2; /* Merah sangat muda */
+}
+
+
+/* --- Judul Sub-Menu dan Form/Daftar (Warna Kategori) --- */
+.label-sub-menu-title { /* Mengganti label-judul-halaman untuk sub-menu/form/daftar */
+    -fx-font-size: 28px;
+    -fx-font-weight: bold;
+    -fx-padding: 15px 0 25px 0;
+    -fx-alignment: center;
+    -fx-pref-width: 100%;
+}
+
+.label-sub-menu-title.peternak {
+    -fx-text-fill: #2ecc71; /* Hijau untuk Peternak */
+}
+
+.label-sub-menu-title.kolam {
+    -fx-text-fill: #f1c40f; /* Kuning untuk Kolam */
+}
+
+.label-sub-menu-title.ikan {
+    -fx-text-fill: #e74c3c; /* Merah untuk Ikan */
+}

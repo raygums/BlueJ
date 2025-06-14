@@ -1,15 +1,13 @@
-// Kolam.java
 public class Kolam {
     private String idKolam;
     private String namaKolam;
-    private String jenisKolam; // Terpal, Beton, Tanah
+    private String jenisKolam; 
     private String lokasiKolam;
-    private String tanggalTebar; // Pertimbangkan menggunakan LocalDate
-    private String tanggalPerkiraanPanen; // Pertimbangkan menggunakan LocalDate
+    private String tanggalTebar; 
+    private String tanggalPerkiraanPanen; 
     private double suhuAir;
     private double phAir;
 
-    // Konstruktor
     public Kolam(String idKolam, String namaKolam, String jenisKolam,
                  String lokasiKolam, String tanggalTebar, String tanggalPerkiraanPanen,
                  double suhuAir, double phAir) {
@@ -23,7 +21,6 @@ public class Kolam {
         this.phAir = phAir;
     }
 
-    // Getter
     public String getIdKolam() {
         return idKolam;
     }
